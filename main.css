@@ -1,0 +1,743 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ============================================================ */
+/* СВЕТЛАЯ ТЕМА ПО УМОЛЧАНИЮ */
+/* ============================================================ */
+body {
+    background-color: #f5f5f5;
+    color: #1a1a1a;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#nav{
+    width: 60%;
+    margin: 16px auto;
+    font-size: larger;
+    display: flex;
+    justify-content: space-between;
+}
+
+#nav p{
+    cursor: pointer;
+    color: #1a1a1a;
+    transition: color 0.3s;
+}
+
+#nav p:hover {
+    color: #4a6cf7;
+}
+
+hr{
+    margin: auto;
+    border: 1px solid #d0d0d0;
+}
+
+main{
+    width: 34%;
+    margin: 25px auto;
+}
+
+.friendlyText{
+    width: 100%;
+}
+
+.text{
+    margin: 10px auto 20px auto; /* Изменено: уменьшен верхний отступ */
+    font-size: medium;
+    display: none;
+}
+
+/* Специальные стили для блоков с текстом */
+#SantaText, #philosopherText {
+    margin-top: 10px; /* Добавлено: текст выше */
+    margin-bottom: 20px;
+}
+
+#h{
+    display: block;
+    font-size: 65px;
+    color: #1a1a1a;
+}
+
+.Text{
+    text-align: center;
+    margin: 450px 0 0 0;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.form{
+    display: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+fieldset{
+    border-radius: 6px;
+    border: 2px solid #d0d0d0;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+legend h1 {
+    color: #1a1a1a;
+}
+
+h3{
+    margin: 15px 0 7px 0;
+    color: #333;
+}
+
+h3, input{
+    margin-left: 10px;
+}
+
+input{
+    background-color: #ffffff;
+    border: 1px solid #d0d0d0;
+    border-radius: 4px;
+    width: 170px;
+    padding: 6px 10px;
+    color: #1a1a1a;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+    border-color: #4a6cf7;
+    box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.15);
+    outline: none;
+}
+
+#buttons{
+    width: 70%;
+    height: 100px;
+    margin: 20px 85px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+input[type="button"]{
+    width: 100%;
+    height: 40%;
+    background-color: #4a6cf7;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+input[type="button"]:hover {
+    background-color: #3a5cd5;
+    transform: scale(1.02);
+}
+
+input[type="button"]:active {
+    transform: scale(0.98);
+}
+
+#SantaText{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    color: #1a1a1a;
+    line-height: 1.7;
+    margin-top: 10px; /* Добавлено: поднимаем текст */
+}
+
+#philosopherText {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    color: #1a1a1a;
+    line-height: 1.7;
+    margin-top: 10px; /* Добавлено: поднимаем текст */
+}
+
+.lang-btn{
+    height: 32px;
+    width: 55px;
+    background-color: #1a1a1a;
+    color: white;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.lang-btn:hover {
+    background-color: #333;
+}
+
+.ru{
+    display: none;
+}
+
+/* ============================================================ */
+/* MEDIA QUERIES ДЛЯ ТЕЛЕФОНОВ СО СВЕТЛОЙ ТЕМОЙ */
+/* ============================================================ */
+
+/* 1. Для realme C25 (ширина экрана до 720px) */
+@media screen and (max-width: 720px) {
+    /* Навигация */
+    #nav {
+        width: 90%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        font-size: 14px;
+    }
+    
+    #nav p {
+        font-size: 14px;
+        padding: 5px 10px;
+        color: #1a1a1a;
+    }
+    
+    .lang-btn {
+        height: 28px;
+        width: 45px;
+        font-size: 12px;
+        background-color: #1a1a1a;
+        color: white;
+    }
+    
+    /* Горизонтальная линия */
+    hr {
+        width: 95% !important;
+        border-color: #d0d0d0;
+    }
+    
+    /* Основной контент */
+    main {
+        width: 92%;
+        margin: 15px auto;
+    }
+    
+    /* Заголовок */
+    #h {
+        font-size: 32px !important;
+        margin: 100px 0 0 0 !important;
+        color: #1a1a1a;
+    }
+    
+    /* Формы */
+    .form {
+        width: 100%;
+    }
+    
+    fieldset {
+        padding: 12px;
+        background-color: #ffffff;
+        border-color: #d0d0d0;
+    }
+    
+    legend h1 {
+        font-size: 20px !important;
+        color: #1a1a1a;
+    }
+    
+    h3 {
+        font-size: 14px;
+        margin: 10px 0 5px 0;
+        color: #333;
+    }
+    
+    input[type="text"] {
+        width: 100%;
+        font-size: 14px;
+        padding: 8px;
+        margin-left: 0;
+        background-color: #ffffff;
+        border-color: #d0d0d0;
+        color: #1a1a1a;
+    }
+    
+    input[type="text"]:focus {
+        border-color: #4a6cf7;
+        box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.15);
+    }
+    
+    #buttons {
+        width: 100%;
+        height: 80px;
+        margin: 15px 0;
+    }
+    
+    input[type="button"] {
+        font-size: 16px;
+        height: 45px;
+        padding: 10px;
+        background-color: #4a6cf7;
+        color: white;
+    }
+    
+    input[type="button"]:hover {
+        background-color: #3a5cd5;
+    }
+    
+    /* Тексты - ПОДНЯТЫ ВВЕРХ */
+    .text {
+        font-size: 14px;
+        padding: 10px;
+        line-height: 1.6;
+        margin-top: 5px !important; /* Поднимаем текст */
+        margin-bottom: 15px !important;
+    }
+    
+    #SantaText, #philosopherText {
+        font-size: 14px;
+        padding: 15px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        color: #1a1a1a;
+        margin-top: 5px !important; /* Поднимаем текст */
+        margin-bottom: 15px !important;
+    }
+}
+
+/* 2. Для realme 10 4G (ширина до 1080px) */
+@media screen and (min-width: 721px) and (max-width: 1080px) {
+    /* Навигация */
+    #nav {
+        width: 80%;
+        font-size: 16px;
+    }
+    
+    #nav p {
+        font-size: 16px;
+        color: #1a1a1a;
+    }
+    
+    .lang-btn {
+        height: 30px;
+        width: 50px;
+        font-size: 13px;
+        background-color: #1a1a1a;
+        color: white;
+    }
+    
+    /* Горизонтальная линия */
+    hr {
+        width: 85% !important;
+        border-color: #d0d0d0;
+    }
+    
+    /* Основной контент */
+    main {
+        width: 70%;
+        margin: 20px auto;
+    }
+    
+    /* Заголовок */
+    #h {
+        font-size: 45px !important;
+        margin: 200px 0 0 0 !important;
+        color: #1a1a1a;
+    }
+    
+    /* Формы */
+    .form {
+        width: 100%;
+    }
+    
+    fieldset {
+        padding: 20px;
+        background-color: #ffffff;
+        border-color: #d0d0d0;
+    }
+    
+    legend h1 {
+        font-size: 24px !important;
+        color: #1a1a1a;
+    }
+    
+    h3 {
+        font-size: 15px;
+        margin: 12px 0 6px 0;
+        color: #333;
+    }
+    
+    input[type="text"] {
+        width: 90%;
+        font-size: 15px;
+        padding: 8px;
+        background-color: #ffffff;
+        border-color: #d0d0d0;
+        color: #1a1a1a;
+    }
+    
+    input[type="text"]:focus {
+        border-color: #4a6cf7;
+        box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.15);
+    }
+    
+    #buttons {
+        width: 80%;
+        height: 90px;
+        margin: 20px auto;
+    }
+    
+    input[type="button"] {
+        font-size: 18px;
+        height: 45px;
+        background-color: #4a6cf7;
+        color: white;
+    }
+    
+    input[type="button"]:hover {
+        background-color: #3a5cd5;
+    }
+    
+    /* Тексты - ПОДНЯТЫ ВВЕРХ */
+    .text {
+        font-size: 15px;
+        padding: 15px;
+        line-height: 1.7;
+        margin-top: 8px !important; /* Поднимаем текст */
+        margin-bottom: 18px !important;
+    }
+    
+    #SantaText, #philosopherText {
+        font-size: 15px;
+        padding: 20px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        color: #1a1a1a;
+        margin-top: 8px !important; /* Поднимаем текст */
+        margin-bottom: 18px !important;
+    }
+}
+
+/* 3. Для очень маленьких экранов (до 480px) */
+@media screen and (max-width: 480px) {
+    #nav {
+        width: 95%;
+        gap: 5px;
+        font-size: 12px;
+    }
+    
+    #nav p {
+        font-size: 11px;
+        padding: 4px 6px;
+        color: #1a1a1a;
+    }
+    
+    .lang-btn {
+        height: 24px;
+        width: 38px;
+        font-size: 10px;
+        padding: 0 5px;
+        background-color: #1a1a1a;
+        color: white;
+    }
+    
+    #h {
+        font-size: 24px !important;
+        margin: 60px 0 0 0 !important;
+        color: #1a1a1a;
+    }
+    
+    main {
+        width: 96%;
+        margin: 10px auto;
+    }
+    
+    fieldset {
+        padding: 10px;
+        background-color: #ffffff;
+        border-color: #d0d0d0;
+    }
+    
+    legend h1 {
+        font-size: 16px !important;
+        color: #1a1a1a;
+    }
+    
+    h3 {
+        font-size: 12px;
+        margin: 8px 0 4px 0;
+        color: #333;
+    }
+    
+    input[type="text"] {
+        font-size: 12px;
+        padding: 6px;
+        background-color: #ffffff;
+        border-color: #d0d0d0;
+        color: #1a1a1a;
+    }
+    
+    input[type="button"] {
+        font-size: 14px;
+        height: 40px;
+        background-color: #4a6cf7;
+        color: white;
+    }
+    
+    #buttons {
+        height: 65px;
+        margin: 10px 0;
+    }
+    
+    /* Тексты - ПОДНЯТЫ ВВЕРХ */
+    .text {
+        font-size: 12px;
+        padding: 8px;
+        line-height: 1.5;
+        margin-top: 3px !important; /* Поднимаем текст */
+        margin-bottom: 10px !important;
+    }
+    
+    #SantaText, #philosopherText {
+        font-size: 12px;
+        padding: 12px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        color: #1a1a1a;
+        margin-top: 3px !important; /* Поднимаем текст */
+        margin-bottom: 10px !important;
+    }
+}
+
+/* 4. Для экранов с высокой плотностью пикселей (retina) */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* Улучшаем четкость текста */
+    .text, #SantaText, #philosopherText, h3, h1, p {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+/* 5. Для альбомной ориентации (горизонтальный режим) */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+    #h {
+        font-size: 28px !important;
+        margin: 30px 0 0 0 !important;
+        color: #1a1a1a;
+    }
+    
+    main {
+        width: 80%;
+        margin: 10px auto;
+    }
+    
+    .form {
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+    
+    fieldset {
+        padding: 12px;
+        background-color: #ffffff;
+        border-color: #d0d0d0;
+    }
+    
+    legend h1 {
+        font-size: 18px !important;
+        color: #1a1a1a;
+    }
+    
+    h3 {
+        font-size: 13px;
+        margin: 5px 0 3px 0;
+        color: #333;
+    }
+    
+    input[type="text"] {
+        font-size: 13px;
+        padding: 5px;
+        background-color: #ffffff;
+        border-color: #d0d0d0;
+        color: #1a1a1a;
+    }
+    
+    #buttons {
+        height: 60px;
+        margin: 10px 0;
+    }
+    
+    input[type="button"] {
+        font-size: 15px;
+        height: 38px;
+        background-color: #4a6cf7;
+        color: white;
+    }
+    
+    /* Тексты - ПОДНЯТЫ ВВЕРХ */
+    #SantaText, #philosopherText {
+        background-color: #ffffff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        color: #1a1a1a;
+        margin-top: 5px !important;
+        margin-bottom: 12px !important;
+    }
+}
+
+/* 6. Для портретной ориентации (вертикальный режим) - оптимизация для realme C25 */
+@media screen and (orientation: portrait) and (max-width: 720px) {
+    #h {
+        margin: 80px 0 0 0 !important;
+        color: #1a1a1a;
+    }
+    
+    .text {
+        max-height: 70vh;
+        overflow-y: auto;
+    }
+    
+    #SantaText, #philosopherText {
+        margin-top: 5px !important;
+        margin-bottom: 15px !important;
+    }
+}
+
+/* 7. Светлая тема для всех устройств (принудительно) */
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: #f5f5f5;
+        color: #1a1a1a;
+    }
+    
+    fieldset {
+        background-color: #ffffff;
+        border-color: #d0d0d0;
+    }
+    
+    input[type="text"] {
+        background-color: #ffffff;
+        border-color: #d0d0d0;
+        color: #1a1a1a;
+    }
+    
+    input[type="text"]:focus {
+        border-color: #4a6cf7;
+        box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.15);
+    }
+    
+    input[type="button"] {
+        background-color: #4a6cf7;
+        color: white;
+    }
+    
+    input[type="button"]:hover {
+        background-color: #3a5cd5;
+    }
+    
+    .lang-btn {
+        background-color: #1a1a1a;
+        color: white;
+    }
+    
+    #nav p {
+        color: #1a1a1a;
+    }
+    
+    #SantaText, #philosopherText {
+        background-color: #ffffff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        color: #1a1a1a;
+        margin-top: 10px;
+    }
+    
+    #h {
+        color: #1a1a1a;
+    }
+    
+    h3 {
+        color: #333;
+    }
+    
+    legend h1 {
+        color: #1a1a1a;
+    }
+}
+
+/* 8. Принудительно светлая тема даже если система в темной */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #f5f5f5 !important;
+        color: #1a1a1a !important;
+    }
+    
+    fieldset {
+        background-color: #ffffff !important;
+        border-color: #d0d0d0 !important;
+    }
+    
+    input[type="text"] {
+        background-color: #ffffff !important;
+        border-color: #d0d0d0 !important;
+        color: #1a1a1a !important;
+    }
+    
+    input[type="text"]:focus {
+        border-color: #4a6cf7 !important;
+        box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.15) !important;
+    }
+    
+    input[type="button"] {
+        background-color: #4a6cf7 !important;
+        color: white !important;
+    }
+    
+    input[type="button"]:hover {
+        background-color: #3a5cd5 !important;
+    }
+    
+    .lang-btn {
+        background-color: #1a1a1a !important;
+        color: white !important;
+    }
+    
+    #nav p {
+        color: #1a1a1a !important;
+    }
+    
+    #SantaText, #philosopherText {
+        background-color: #ffffff !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08) !important;
+        color: #1a1a1a !important;
+        margin-top: 10px !important;
+    }
+    
+    #h {
+        color: #1a1a1a !important;
+    }
+    
+    h3 {
+        color: #333 !important;
+    }
+    
+    legend h1 {
+        color: #1a1a1a !important;
+    }
+    
+    hr {
+        border-color: #d0d0d0 !important;
+    }
+}
+
+/* 9. Дополнительная оптимизация для ПК (большие экраны) */
+@media screen and (min-width: 1081px) {
+    #SantaText, #philosopherText {
+        margin-top: 10px; /* Поднимаем текст на ПК */
+        margin-bottom: 25px;
+    }
+    
+    .text {
+        margin-top: 10px;
+        margin-bottom: 25px;
+    }
+}

@@ -1,0 +1,113 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div id="nav">
+            <p id="santa" onclick="Santa()" data-lang="nav1" class="lang"></p>
+            <p id="philosopher" onclick="philosopher()" data-lang="nav2" class="lang"></p>
+            <button class="lang-btn ru" data-set-lang="ru">RU</button>
+            <button class="lang-btn en" data-set-lang="en">EN</button>
+        </div>
+    </header>
+    <hr width="700px" color="black">
+    <main>
+        <div class="freindlyText">
+            <h1 class="Text lang" id="h" data-lang="textHelper"></h1>
+        </div>
+        <div class="form" id="form1"> 
+            <fieldset>
+                <legend><h1 data-lang="qest" class="lang"></h1></legend>
+                <label for="name"><h3 data-lang="let2" class="lang"></h3></label>
+                <input type="text" id="name" required>
+                <label for="old"><h3 data-lang="let3" class="lang"></h3></label>
+                <input type="text" id="old" required>
+                <label for="broke"><h3 data-lang="let4" class="lang"></h3></label>
+                <input type="text" id="broke" required>
+                <label for="sleepTime"><h3 data-lang="let5" class="lang"></h3></label>
+                <input type="text" id="sleepTime" required>
+                <label for="fly"><h3 data-lang="let6" class="lang"></h3></label>
+                <input type="text" id="fly" required>
+                <label for="phrase"><h3 data-lang="let7" class="lang"></h3></label>
+                <input type="text" id="phrase" required>
+                <label for="betray"><h3 data-lang="let8" class="lang"></h3></label>
+                <input type="text" id="betray" required>
+                <label for="curse"><h3 data-lang="let9" class="lang"></h3></label>
+                <input type="text" id="curse" required>
+                <label for="partOfBody"><h3 data-lang="let10" class="lang"></h3></label>
+                <input type="text" id="partOfBody" required>
+                <label for="red"><h3 data-lang="let11" class="lang"></h3></label>
+                <input type="text" id="red" required>
+                <label for="Profession"><h3 data-lang="let12" class="lang"></h3></label>
+                <input type="text" id="Profession" required>
+                <label for="game"><h3 data-lang="let13" class="lang"></h3></label>
+                <input type="text" id="game" required>
+                <label for="dogFall"><h3 data-lang="let14" class="lang"></h3></label>
+                <input type="text" id="dogFall" required>
+                <label for="party"><h3 data-lang="let15" class="lang"></h3></label>
+                <input type="text" id="party" required>
+                <label for="miss"><h3 data-lang="let16" class="lang"></h3></label>
+                <input type="text" id="miss" required>
+                <label for="item"><h3 data-lang="let17" class="lang"></h3></label>
+                <input type="text" id="item" required>
+                <label for="wanting"><h3 data-lang="let18" class="lang"></h3></label>
+                <input type="text" id="wanting" required>
+                <label for="look"><h3 data-lang="let19" class="lang"></h3></label>
+                <input type="text" id="look" required>
+                <label for="call"><h3 data-lang="let20" class="lang"></h3></label>
+                <input type="text" id="call" required>
+                <label for="person"><h3 data-lang="let21" class="lang"></h3></label>
+                <input type="text" id="person" required>
+                <div id="buttons">
+                    <input type="button" onclick="submit()" id="submit" data-lang="submitBtn" class="lang">
+                </div>
+            </fieldset>
+        </div>
+        <div id="SantaText" class="text">
+            <p></p>
+        </div>
+        <div class="form" id="form2"> 
+            <fieldset>
+                <legend><h1 data-lang="qest" class="lang"></h1></legend>
+                <label for="fell"><h3 data-lang="let22" class="lang"></h3></label>
+                <input type="text" id="fell" required>
+                <label for="socks"><h3 data-lang="let23" class="lang"></h3></label>
+                <input type="text" id="socks" required>
+                <label for="zebra"><h3 data-lang="let24" class="lang"></h3></label>
+                <input type="text" id="zebra" required>
+                <label for="duck"><h3 data-lang="let25" class="lang"></h3></label>
+                <input type="text" id="duck" required>
+                <label for="sofa"><h3 data-lang="let26" class="lang"></h3></label>
+                <input type="text" id="sofa" required>
+                <label for="cups"><h3 data-lang="let27" class="lang"></h3></label>
+                <input type="text" id="cups" required>
+                <label for="hug"><h3 data-lang="let28" class="lang"></h3></label>
+                <input type="text" id="hug" required>
+                <label for="trafficJam"><h3 data-lang="let29" class="lang"></h3></label>
+                <input type="text" id="trafficJam" required>
+                <label for="fridge"><h3 data-lang="let30" class="lang"></h3></label>
+                <input type="text" id="fridge" required>
+                <label for="reread"><h3 data-lang="let31" class="lang"></h3></label>
+                <input type="text" id="reread" required>
+                <label for="button"><h3 data-lang="let32" class="lang"></h3></label>
+                <input type="text" id="button" required>
+                <label for="laugh"><h3 data-lang="let33" class="lang"></h3></label>
+                <input type="text" id="laugh" required>
+                <label for="realise"><h3 data-lang="let34" class="lang"></h3></label>
+                <input type="text" id="realise" required>
+                <div id="buttons">
+                    <input type="button" onclick="submitsec()" id="submit" data-lang="submitBtn" class="lang">
+                </div>
+            </fieldset>
+        </div>
+        <div id="philosopherText" class="text">
+            <p></p>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
